@@ -45,7 +45,7 @@ __lua__
 			drawRectBorder(box)
 		end
 
-		print("test",3,3,7)
+		print("text",3,3,7)
 
 		for i=1,#points,1 do
 			rectfill(points[i][1], points[i][2],points[i][1],points[i][2],8)

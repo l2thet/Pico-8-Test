@@ -12,7 +12,7 @@ codo_init
     07 fullscreen_method 1 // 0 maximized window (linux)  1 borderless desktop-sized window  2 fullscreen
     08 foreground_sleep_ms 5 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
     09 background_sleep_ms 20 // number of milliseconds to sleep each frame when running in the background
-    10 sessions 33 // number of times program has been run
+    10 sessions 41 // number of times program has been run
     11 rmb_key 0 // 0 for none  226 for LALT
     12 emulate_textinput 0 
     13 desktop_path 
@@ -20,8 +20,8 @@ codo_init
     15 music_volume 256 // 0..256
     16 mix_buffer_size 1024 // usually 1024. Try 2048 if you get choppy sound
     17 version 0.1.11g
-    18 root_path c:/Users/daltv/Documents/VSC/pico/carts/
-    19 cdata_path c:/Users/daltv/Documents/VSC/pico/cdata/
+    18 root_path d:/Users/lt/Pico/Pico-8-Test/carts/
+    19 cdata_path d:/Users/lt/Pico/Pico-8-Test/cdata/
     20 joystick_index 0
     21 button_keys 0 0 0 0 0 0 0 0 0 0 0 0 0 
     22 live_notes 0
@@ -60,12 +60,12 @@ codo_init
   codo_video_init
   codo_mouse_init
   codo_joystick_init
-  Reading controller mappings: c:/Users/daltv/Documents/VSC/pico/sdl_controllers.txt
+  Reading controller mappings: d:/Users/lt/Pico/Pico-8-Test/sdl_controllers.txt
   searching for joysticks
     found 0 joysticks
   ok
 ok
-set app.auto_load_fn c:\Users\daltv\Documents\VSC\pico\carts\template.p8
+set app.auto_load_fn d:\Users\lt\Pico\Pico-8-Test\carts\template.p8
 codo_load_pod: C:/Program Files (x86)/PICO-8/pico8.dat ok 
 codo_set_screen 128 128 8 100
  set pixel_perfect 1
@@ -74,7 +74,7 @@ Current renderer:
   Renderer direct3d:
     Flags: 0x0000000E ( |  | )
     Texture formats (3): ARGB8888, YV12, IYUV
-    Max Texture Size: 8192x8192
+    Max Texture Size: 16384x16384
 codo_sound_init mix_buffer_size: 1024
 codo_sound_init
 SDL_INIT_AUDIO ok

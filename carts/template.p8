@@ -21,11 +21,21 @@ __lua__
 	box = {
 		startposx = 0,
 		startposy = 0,
-		xlength = 20,
-		ylength = 10,
-		color = 7
+		color = 7,
+		xPadding = 2,
+		yPadding = 3,
+		textColor = 7,
+		text = "",
+		textWidth = 0,
+		xlength = 0,
+		ylength = 10
 	}
 	
+	box.text = "standard text test"
+	box.textWidth = #box.text * 4--text width is character length * 4
+	box.xlength = box.xPadding + box.textWidth + box.xPadding
+
+
 	function _update60()
 		mousePosition.mousex = stat(32)
 		mousePosition.mousey = stat(33)
@@ -39,13 +49,11 @@ __lua__
 
 		if(isMouseInsideBox(mousePosition, box)) then
 			box.color = 8
-			drawRectBorder(box)
+			drawRectBorderWithText(box)
 		else
 			box.color = 7
-			drawRectBorder(box)
+			drawRectBorderWithText(box)
 		end
-
-		print("text",3,3,7)
 
 		for i=1,#points,1 do
 			rectfill(points[i][1], points[i][2],points[i][1],points[i][2],8)
@@ -54,9 +62,9 @@ __lua__
 		rectfill(mousePosition.mousex,mousePosition.mousey, mousePosition.mousex,mousePosition.mousey,11)
 	end
 
-	function drawRectBorder(tableborder)
-		--character width is character lenght * 4
-		rect(tableborder.startposx, tableborder.startposy, tableborder.xlength, tableborder.ylength, tableborder.color)
+	function drawRectBorderWithText(_box)
+		rect(_box.startposx, _box.startposy, _box.xlength, _box.ylength, _box.color)
+		print(_box.text,_box.xPadding,_box.yPadding,_box.textColor)
 	end
 
 	function isMouseInsideBox(_mouseposition, _box)
